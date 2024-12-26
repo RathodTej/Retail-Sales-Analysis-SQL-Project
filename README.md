@@ -24,6 +24,7 @@ This project is designed to demonstrate SQL skills and techniques typically used
 ```sql
 -- create database
 create database retail_sales_database;
+
 use retail_sales_database;
 
 -- create table
@@ -41,10 +42,11 @@ CREATE TABLE retail_sales
     cogs FLOAT,
     total_sale FLOAT
 );
+
 DESCRIBE retail_sales;
 ```
 
-###2. Data Exploration & Cleaning
+### 2. Data Exploration & Cleaning
 
 - **Record Count**: Determine the total number of records in the dataset.
 - **Customer Count**: Find out how many unique customers are in the dataset.
@@ -53,61 +55,59 @@ DESCRIBE retail_sales;
 
 ```sql
 SELECT COUNT(*) FROM retail_sales;
-
 SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
-
 SELECT DISTINCT category FROM retail_sales;
 
 SELECT * FROM retail_sales
 WHERE
 	transactions_id IS NULL
 	OR
-    sale_date IS NULL
+    	sale_date IS NULL
 	OR
-    customer_id IS NULL
+    	customer_id IS NULL
 	OR
-    sale_time IS NULL
+    	sale_time IS NULL
 	OR
-    gender IS NULL
+    	gender IS NULL
 	OR
-    age IS NULL
+	age IS NULL
 	OR
-    category IS NULL
+    	category IS NULL
 	OR
-    quantity IS NULL
+    	quantity IS NULL
 	OR
-    price_per_unit IS NULL
+    	price_per_unit IS NULL
 	OR
-    cogs IS NULL
+    	cogs IS NULL
 	OR
-    total_sale IS NULL;
+    	total_sale IS NULL;
 
 DELETE FROM retail_sales
 WHERE 
 	transactions_id IS NULL
 	OR
-    sale_date IS NULL
+    	sale_date IS NULL
 	OR
-    customer_id IS NULL
+    	customer_id IS NULL
 	OR
-    sale_time IS NULL
+    	sale_time IS NULL
 	OR
-    gender IS NULL
+    	gender IS NULL
 	OR
-    age IS NULL
+    	age IS NULL
 	OR
-    category IS NULL
+    	category IS NULL
 	OR
-    quantity IS NULL
+    	quantity IS NULL
 	OR
-    price_per_unit IS NULL
+    	price_per_unit IS NULL
 	OR
-    cogs IS NULL
+    	cogs IS NULL
 	OR
-    total_sale IS NULL;
+    	total_sale IS NULL;
 ```
 
-###3. Data Analysis & Findings
+### 3. Data Analysis & Findings
 The following SQL queries were developed to answer specific business questions:
 
 1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**:
@@ -130,7 +130,7 @@ and month(sale_date) = 11 and year(sale_date)=2022;
 ```sql
 select category, 
 	sum(total_sale) net_sale,
-    count(*) total_orders
+    	count(*) total_orders
 from retail_sales
 group by category;
 ```
@@ -151,7 +151,9 @@ where total_sale > 1000;
 
 6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category**:
 ```sql
-select category, gender, count(*) as total_trans
+select category,
+	gender,
+	count(*) as total_trans
 from retail_sales 
 group by category, gender
 order by category,gender desc;
@@ -167,9 +169,10 @@ from
 	avg(total_sale) _avg,
 	rank() over(
 			partition by year(sale_date) 
-            order by avg(total_sale) desc) as _rank
-from retail_sales
-group by year(sale_date), month(sale_date)
+            		order by avg(total_sale) desc
+		) as _rank
+	from retail_sales
+	group by year(sale_date), month(sale_date)
 ) t1
 where _rank =1;
 ```
@@ -178,7 +181,7 @@ where _rank =1;
 ```sql
 select 
 	customer_id,
-    sum(total_sale) total_sales
+    	sum(total_sale) total_sales
 from retail_sales
 group by customer_id
 order by total_sales desc
@@ -207,34 +210,34 @@ from retail_sales
 group by shift;
 ```
 
-##Findings
+## Findings
 
 - **Customer Demographics**: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
 - **High-Value Transactions**: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
 - **Sales Trends**: Monthly analysis shows variations in sales, helping identify peak seasons.
 - **Customer Insights**: The analysis identifies the top-spending customers and the most popular product categories.
 
-##Reports
+## Reports
 
 - **Sales Summary**: A detailed report summarizing total sales, customer demographics, and category performance.
 - **Trend Analysis**: Insights into sales trends across different months and shifts.
 - **Customer Insights**: Reports on top customers and unique customer counts per category.
 
-##Conclusion
+## Conclusion
 
 This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
 
-##How to Use
+## How to Use
 
-1.**Clone the Repository**: Clone this project repository from GitHub.
+1. **Clone the Repository**: Clone this project repository from GitHub.
 2. **Set Up the Database**: Run the SQL scripts provided in the `database_setup.sql` file to create and populate the database.
 3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
 Explore and Modify: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
 
-##Author - RJ_RATHOD
+## Author - RJ_RATHOD
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
-###Stay Updated and Join the Community
+### Stay Updated and Join the Community
 For more content on SQL, data analysis, and other data-related topics, make sure to follow me on:
 
 - **LinkedIn**: [Connect with me here](https://www.linkedin.com/in/bhanu-teja-rathod/)
