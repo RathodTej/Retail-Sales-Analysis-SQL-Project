@@ -185,7 +185,7 @@ group by shift;
 - **Customer Insights**: The analysis identifies the top-spending customers and the most popular product categories.
 
 - **Total Sales**: The total sales recorded in the dataset amounted to
-  	|category	|net_sale	|total_orders	|
+  	| **category**	| **net_sale**	| **total_orders**|
   	|---------------|---------------|---------------|
 	|Beauty		|286790		|611		|
 	|Clothing	|309995		|698		|
