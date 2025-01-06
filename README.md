@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Project Title**: Retail Sales Analysis
+**Project Title**: Retail Sales Analysis<br>
 **Level**: Beginner
 **Database**: `retail_sales_database`
 
