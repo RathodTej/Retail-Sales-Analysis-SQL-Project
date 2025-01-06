@@ -190,32 +190,37 @@ group by shift;
 	|Beauty		|286790		|611		|
 	|Clothing	|309995		|698		|
 	|Electronics	|311445		|678		|
-- Customer Distribution: A total of 155 unique customers made purchases, with varying preferences across categories.
-Top Categories: The categories with the highest sales were:
-Beauty: $286,790
-Clothing: $309,995
-Electronics: $311,445
-Best-Selling Month: The best-selling month was July 2022, with an average sale of $541.34.
-High-Value Transactions: Several transactions exceeded $1,000, indicating significant purchases, with [Insert Any Specific Insights or Total Count].
-Customer Age: The average age of customers purchasing from the Beauty category was 40.42 years.
-Sales by Gender: Transaction counts were fairly balanced between genders, indicating a diverse customer base.
-Peak Sales Periods: Most sales occurred in the Evening shift, followed by Morning and Afternoon.
-Top Customers: The top five customers based on total sales contributed significantly to overall revenue:
-Customer ID 3: $38,440
-Customer ID 1: $30,750
-Customer ID 5: $30,405
-Customer ID 2: $25,295
-Customer ID 4: $23,580
+
+- **Customer Distribution**: A total of `155` unique customers made purchases, with varying preferences across categories.
+- **Top Categories**: The categories with the highest sales were:
+	| **category**	| **net_sale**	|
+  	|---------------|---------------|
+	|Beauty		|286790		|
+	|Clothing	|309995		|
+	|Electronics	|311445		|
+
+- **Best-Selling Month**: The best-selling month was `July 2022`, with an average sale of `541.34`.
+- **Customer Age**: The average age of customers purchasing from the Beauty category was `40.42` years.
+- **Sales by Gender**: Transaction counts were fairly balanced between genders, indicating a diverse customer base.
+- **Peak Sales Periods**: Most sales occurred in the Evening shift, followed by Morning and Afternoon.
+- **Top Customers**: The top five customers based on total sales contributed significantly to overall revenue:
+	|customer_id	|total_sales|
+	|---------------|-----------|
+	|3	|38440|
+	|1	|30750|
+	|5	|30405|
+	|2	|25295|
+	|4	|23580|
 
 ## Reports
 
 - **Sales Summary**: A detailed report summarizing total sales, customer demographics, and category performance.
-- **Trend Analysis**: Insights into sales trends across different months and shifts.
-- **Customer Insights**: Reports on top customers and unique customer counts per category.
+- **Trend Analysis**: Insights on sales trends over time, including best-selling months and peak sales periods.
+- **Customer Insights**: Analysis of customer demographics, purchasing behavior, and identification of top customers
 
 ## Conclusion
 
-This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
+This project provides a solid introduction to SQL for data analysts, encompassing database setup, data cleaning, exploratory data analysis, and practical SQL queries. The insights gained from this analysis can support better business decisions by revealing trends in sales, understanding customer behavior, and assessing product performance. Overall, it highlights the significance of using data to drive effective strategies in retail.
 
 ## How to Use
 
@@ -226,6 +231,8 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 
 ## Author - RJ_RATHOD
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
+
+### Refered by : [Zero Analyst](https://github.com/najirh)
 
 ### Stay Updated and Join the Community
 For more content on SQL, data analysis, and other data-related topics, make sure to follow me on:
