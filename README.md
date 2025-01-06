@@ -184,6 +184,29 @@ group by shift;
 - **Sales Trends**: Monthly analysis shows variations in sales, helping identify peak seasons.
 - **Customer Insights**: The analysis identifies the top-spending customers and the most popular product categories.
 
+- **Total Sales**: The total sales recorded in the dataset amounted to
+  	|category	|net_sale	|total_orders	|
+  	|---------------|---------------|---------------|
+	|Beauty		|286790		|611		|
+	|Clothing	|309995		|698		|
+	|Electronics	|311445		|678		|
+- Customer Distribution: A total of 155 unique customers made purchases, with varying preferences across categories.
+Top Categories: The categories with the highest sales were:
+Beauty: $286,790
+Clothing: $309,995
+Electronics: $311,445
+Best-Selling Month: The best-selling month was July 2022, with an average sale of $541.34.
+High-Value Transactions: Several transactions exceeded $1,000, indicating significant purchases, with [Insert Any Specific Insights or Total Count].
+Customer Age: The average age of customers purchasing from the Beauty category was 40.42 years.
+Sales by Gender: Transaction counts were fairly balanced between genders, indicating a diverse customer base.
+Peak Sales Periods: Most sales occurred in the Evening shift, followed by Morning and Afternoon.
+Top Customers: The top five customers based on total sales contributed significantly to overall revenue:
+Customer ID 3: $38,440
+Customer ID 1: $30,750
+Customer ID 5: $30,405
+Customer ID 2: $25,295
+Customer ID 4: $23,580
+
 ## Reports
 
 - **Sales Summary**: A detailed report summarizing total sales, customer demographics, and category performance.
